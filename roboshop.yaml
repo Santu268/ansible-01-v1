@@ -5,7 +5,7 @@
     ami_id: ami-0220d79f3f480ecf5
     domain_id: santoshshell.online
     type: t3.small
-    instances: ["mongodb", "redis", "frontend"]
+    instances: ["mongodb"]
     activity: create
   tasks:
     - name: Install AWS SDK libraries
