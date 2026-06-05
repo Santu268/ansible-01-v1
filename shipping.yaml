@@ -59,7 +59,6 @@
       community.general.ansible_galaxy_install:
         name: ansible.mysql
         type: collection
-        state: present
         delegate_to: localhost
     - name: Import the dump file into the MySQL database
       ansible.mysql.mysql_db:
