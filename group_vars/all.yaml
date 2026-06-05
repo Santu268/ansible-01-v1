@@ -10,4 +10,5 @@ CART_HOST: cart.santoshshell.online
 SHIPPING_HOST: shipping.santoshshell.online
 PAYMENT_HOST: payment.santoshshell.online
 RABBITMQ_HOST: rabbitmq.santoshshell.online
+MYSQL_HOST: mysql.santoshshell.online
 DISPATCH_HOST: dispatch.santoshshell.com
