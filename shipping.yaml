@@ -45,7 +45,7 @@
       register: maven_output
     - name: Rename compiled Maven package to production file name
       ansible.builtin.command:
-        cmd: mv /target/shipping-1.0.jar shipping.jar
+        cmd: mv target/shipping-1.0.jar shipping.jar
         chdir: /app
     - name: copy the shipping service file
       ansible.builtin.template:
