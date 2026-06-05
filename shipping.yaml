@@ -19,7 +19,7 @@
         state: present
     - name: remove /tmp/shipping.zip path
       ansible.builtin.file:
-        src: /tmp/shipping.zip
+        path: /tmp/shipping.zip
         state: present
     # - name: Create a new directory with specific permissions
     #   ansible.builtin.file:
