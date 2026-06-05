@@ -17,21 +17,14 @@
         home: /app
         system: true
         comment: "roboshop system user"
-    - name: roboshop user add
-      ansible.builtin.user:
-        name: roboshop
-        system: true
-        home: /app
-        comment: "roboshop system user"
-        shell: /sbin/nologin
     - name: remove app directory
       ansible.builtin.file:
         src: /app
-        state: present
+        state: absent
     - name: remove /tmp/shipping.zip path
       ansible.builtin.file:
         src: /tmp/shipping.zip
-        state: present
+        state: absent
     - name: Create a new directory with specific permissions
       ansible.builtin.file:
         path: /app
