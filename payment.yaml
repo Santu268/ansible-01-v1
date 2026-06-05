@@ -29,10 +29,10 @@
       ansible.builtin.file:
         path: /app
         state: directory
-    - name: Create a new directory with specific permissions
-      ansible.builtin.file:
-        path: /tmp/payment.zip
-        state: directory
+    # - name: Create a new directory with specific permissions
+    #   ansible.builtin.file:
+    #     path: /tmp/payment.zip
+    #     state: directory
     - name: down the payment code
       ansible.builtin.get_url:
         url: https://roboshop-artifacts.s3.amazonaws.com/payment-v3.zip
