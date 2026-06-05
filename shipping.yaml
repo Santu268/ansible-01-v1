@@ -21,14 +21,14 @@
       ansible.builtin.file:
         path: /tmp/shipping.zip
         state: absent
-    # - name: Create a new directory with specific permissions
-    #   ansible.builtin.file:
-    #     path: /app
-    #     state: directory
     - name: Create a new directory with specific permissions
       ansible.builtin.file:
-        path: /tmp/shipping.zip
+        path: /app
         state: directory
+    # - name: Create a new directory with specific permissions
+    #   ansible.builtin.file:
+    #     path: /tmp/shipping.zip
+    #     state: directory
     - name: down the shipping code
       ansible.builtin.get_url:
         url: https://roboshop-artifacts.s3.amazonaws.com/shipping-v3.zip
