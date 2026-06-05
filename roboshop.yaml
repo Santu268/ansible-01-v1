@@ -8,6 +8,12 @@
     instances: ["mongodb", "redis", "frontend"]
     activity: create
   tasks:
+    - name: Install AWS SDK libraries
+      ansible.builtin.pip:
+        name: 
+          - boto3
+          - botocore
+        state: present
     - name: create ec2 instance
       amazon.aws.ec2_instance:
         name: "roboshop-{{ item }}"
