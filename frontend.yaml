@@ -28,6 +28,10 @@
       ansible.builtin.get_url:
         url: https://roboshop-artifacts.s3.amazonaws.com/frontend-v3.zip
         dest: /tmp/frontend.zip
+    - name: create html directory
+      file:
+        path: /usr/share/nginx/html/
+        state: directory
     - name: Copy and extract local zip file to the remote server
       ansible.builtin.unarchive:
         src: /tmp/frontend.zip
