@@ -9,5 +9,4 @@ USER_HOST: user.santoshshell.online
 CART_HOST: cart.santoshshell.online
 SHIPPING_HOST: shipping.santoshshell.online
 PAYMENT_HOST: payment.santoshshell.online
-FRONTEND_HOST: santoshshell.online
 DISPATCH_HOST: dispatch.santoshshell.com
