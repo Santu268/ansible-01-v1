@@ -15,7 +15,7 @@
         shell: /sbin/nologin
     - name: remove app directory
       ansible.builtin.file:
-        src: /app
+        path: /app
         state: present
     - name: remove /tmp/shipping.zip path
       ansible.builtin.file:
