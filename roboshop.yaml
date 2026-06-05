@@ -65,8 +65,8 @@
     - name: delete r53 records
       amazon.aws.route53:
         state: absent
-        zone: "{{ domain_name }}"
-        record: "{{ item }}.{{ domain_name }}" # mongodb.daws90s.shop
+        zone: "{{ domain_id }}"
+        record: "{{ item }}.{{ domain_id }}" # mongodb.daws90s.shop
         ttl: 1
         type: A
       loop: "{{ instances  }}"  
@@ -75,8 +75,8 @@
     - name: delete r53 records for frontend
       amazon.aws.route53:
         state: absent
-        zone: "{{ domain_name }}"
-        record: "{{ item }}.{{ domain_name }}" # mongodb.daws90s.shop
+        zone: "{{ domain_id }}"
+        record: "{{ item }}.{{ domain_id }}" # mongodb.daws90s.shop
         ttl: 1
         type: A
       loop: "{{ instances  }}"  
