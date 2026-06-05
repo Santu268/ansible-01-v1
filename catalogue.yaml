@@ -64,10 +64,12 @@
       community.general.ansible_galaxy_install:
         type: collection
         name: community.general
+      delegate_to: localhost
     - name: Download and install ansible.mysql from Galaxy
       community.general.ansible_galaxy_install:
         name: community.mongodb
         type: collection
+      delegate_to: localhost
     - name: Load database using a JavaScript seed file
       community.mongodb.mongodb_shell:
         login_host: "{{ MONGODB_HOST }}"
