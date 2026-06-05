@@ -45,8 +45,8 @@
       register: maven_output
     - name: Rename compiled Maven package to production file name
       ansible.builtin.command:
-        cmd: mv target/shipping-1.0.jar shipping.jar
-        chdir: /var/www/my-app-source/
+        cmd: mv /target/shipping-1.0.jar shipping.jar
+        chdir: /app
     - name: copy the shipping service file
       ansible.builtin.template:
         src: shipping.service.j2
@@ -60,6 +60,7 @@
         name: ansible.mysql
         type: collection
         state: present
+        delegate_to: localhost
     - name: Import the dump file into the MySQL database
       ansible.mysql.mysql_db:
         name: all
