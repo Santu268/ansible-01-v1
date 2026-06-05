@@ -64,7 +64,6 @@
       community.general.ansible_galaxy_install:
         name: community.mongodb
         type: collection
-        state: present
     - name: Load database using a JavaScript seed file
       community.mongodb.mongodb_shell:
         login_host: "{{ MONGODB_HOST }}"
