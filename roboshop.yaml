@@ -70,7 +70,7 @@
         ttl: 1
         type: A
       loop: "{{ instances  }}"  
-      when: action == "delete"
+      when: activity == "destroy"
 
     - name: delete r53 records for frontend
       amazon.aws.route53:
@@ -81,7 +81,7 @@
         type: A
       loop: "{{ instances  }}"  
       when: 
-        - action == "delete"
+        - activity == "destroy"
         - item == "frontend"
 
     - name: destroy ec2 instance
