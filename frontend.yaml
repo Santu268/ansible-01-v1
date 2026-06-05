@@ -39,7 +39,7 @@
         remote_src: yes 
     - name: remove ngnix config file
       ansible.builtin.file:
-        src: /etc/nginx/nginx.conf
+        path: /etc/nginx/nginx.conf
         state: absent
     - name: copy nginx conf
       ansible.builtin.template:
