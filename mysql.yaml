@@ -28,6 +28,9 @@
       run_once: true
       register: result
       changed_when: "'was installed' in result.stdout"
+    - name: print result
+      debug:
+        var: result
     - name: Install PyMySQL (required by community.mysql)
       ansible.builtin.pip:
         name: PyMySQL
