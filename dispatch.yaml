@@ -7,7 +7,7 @@
     - name: install go land
       ansible.builtin.package:
         name: golang 
-        state: presenet
+        state: present
     - name: create user for application
       ansible.builtin.user:
         name: roboshop
