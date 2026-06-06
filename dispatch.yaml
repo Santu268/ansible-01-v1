@@ -64,7 +64,8 @@
         dest: /etc/systemd/system/dispatch.service
     - name: relead service and startNode
       ansible.builtin.systemd_service:
+        name: dispatch
         daemon_reload: true
-        state: restarted
+        state: restarted 
         enabled: true
     
