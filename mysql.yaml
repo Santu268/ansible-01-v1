@@ -21,6 +21,13 @@
     #     var: result
     # to work with ansible.mysql run below command along with pymysql
     # ansible-galaxy collection install ansible.mysql
+    - name: Install community.mysql collection
+      ansible.builtin.command:
+        cmd: ansible-galaxy collection install community.mysql
+      delegate_to: localhost
+      run_once: true
+      register: result
+      changed_when: "'was installed' in result.stdout"
     - name: Install PyMySQL (required by community.mysql)
       ansible.builtin.pip:
         name: PyMySQL
