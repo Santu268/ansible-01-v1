@@ -8,7 +8,7 @@
       ansible.builtin.package:
         name: golang 
         state: presenet
-        - name: create user for application
+    - name: create user for application
       ansible.builtin.user:
         name: roboshop
         shell: /sbin/nologin
@@ -17,11 +17,11 @@
         comment: "roboshop system user"
     - name: remove app directory
       ansible.builtin.file:
-        src: /app
+        path: /app
         state: absent
     - name: remove /tmp/dispatch.zip path
       ansible.builtin.file:
-        src: /tmp/dispatch.zip
+        path: /tmp/dispatch.zip
         state: absent
     - name: Create a new directory with specific permissions
       ansible.builtin.file:
