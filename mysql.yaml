@@ -27,6 +27,8 @@
       ansible.mysql.mysql_user:
         name: root
         password: "RoboShop@1"
+        login_user: root
+        login_password: "RoboShop@1"
         host_all: true
         state: present
       #no_log: true
