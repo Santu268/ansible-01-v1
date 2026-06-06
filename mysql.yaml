@@ -24,10 +24,10 @@
         name: PyMySQL
         state: present
     - name: Set MySQL root password (initial setup)
-      community.mysql.mysql_user:
+      ansible.mysql.mysql_user:
         name: root
         password: "RoboShop@1"
-        host_all: true
+        host: localhost
         state: present
-      no_log: true
+      #no_log: true
 
