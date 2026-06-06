@@ -19,6 +19,8 @@
     # - name: pring result
     #   ansible.builtin.debug:
     #     var: result
+    # to work with ansible.mysql run below command along with pymysql
+    # ansible-galaxy collection install ansible.mysql
     - name: Install PyMySQL (required by community.mysql)
       ansible.builtin.pip:
         name: PyMySQL
