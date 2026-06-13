@@ -1,6 +1,7 @@
 - name: demo on key based auth
   hosts: keyless
   become: yes
+  gather_facts: false
   tasks:
     - name: ping the server
       ping:
