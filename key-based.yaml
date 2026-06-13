@@ -1,6 +1,6 @@
 - name: demo on key based auth
   hosts: keyless
-  become: true
+  become: yes
   tasks:
     - name: install nginx server
       ansible.builtin.dnf:
@@ -9,4 +9,4 @@
 
     - name: ping the server
       ping:
-        
+
