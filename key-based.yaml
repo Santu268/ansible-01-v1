@@ -2,11 +2,6 @@
   hosts: keyless
   become: yes
   tasks:
-    - name: install nginx server
-      ansible.builtin.dnf:
-        name: nginx
-        state: present
-
     - name: ping the server
       ping:
 
